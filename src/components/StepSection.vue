@@ -42,7 +42,7 @@ const revealEl = useReveal()
     <div :ref="textEl" class="parallax" :class="flipped ? 'md:order-1' : 'md:order-2'">
       <p class="flex items-baseline gap-3 text-xs tracking-[0.2em] text-steel uppercase">
         <span>Step {{ index }} / {{ total }}</span>
-        <span v-if="step.meta" class="rounded bg-ink px-1.5 py-0.5 font-semibold text-paper normal-case tracking-normal">{{ step.meta }}</span>
+        <span v-if="step.meta" class="rounded bg-mignon px-1.5 py-0.5 font-semibold text-ink normal-case tracking-normal">{{ step.meta }}</span>
       </p>
 
       <h2 class="mt-3 font-display text-3xl leading-tight text-balance sm:text-4xl">
@@ -53,7 +53,7 @@ const revealEl = useReveal()
       <p
         v-if="step.warning"
         role="note"
-        class="mt-5 flex items-start gap-3 rounded-xl bg-paper px-4 py-3 ring-2 ring-ink"
+        class="mt-5 flex items-start gap-3 rounded-xl bg-paper px-4 py-3 ring-2 ring-mignon"
       >
         <svg viewBox="0 0 24 24" class="mt-px size-5 shrink-0" aria-hidden="true">
           <path d="M12 2.5 23 21.5H1Z" class="fill-mignon" stroke-linejoin="round" />
@@ -76,7 +76,7 @@ const revealEl = useReveal()
           <ol class="mt-5 space-y-3 text-lg leading-relaxed text-ink/90">
             <li v-for="(line, i) in step.details" :key="i" class="flex gap-3 text-pretty">
               <span
-                class="mt-[0.45em] grid size-5 shrink-0 place-items-center rounded-full text-[0.7rem] leading-none font-semibold text-ink ring-1 ring-ink/40"
+                class="mt-[0.45em] grid size-5 shrink-0 place-items-center rounded-full bg-mignon text-[0.7rem] leading-none font-semibold text-ink"
                 aria-hidden="true"
                 >{{ i + 1 }}</span
               >
@@ -97,7 +97,7 @@ const revealEl = useReveal()
         {{ expanded ? 'Hide details' : 'Show details' }}
         <svg
           viewBox="0 0 12 12"
-          class="size-3 transition-transform duration-300"
+          class="size-3 text-mignon transition-transform duration-300"
           :class="expanded && 'rotate-180'"
           aria-hidden="true"
         >

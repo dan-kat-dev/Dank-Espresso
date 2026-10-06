@@ -105,7 +105,7 @@ onBeforeUnmount(() => listen(false))
       aria-label="Pro tip"
       @click="toggle(i)"
     >
-      <svg viewBox="0 0 16 16" class="size-4 text-steel" aria-hidden="true">
+      <svg viewBox="0 0 16 16" class="size-4 text-mignon" aria-hidden="true">
         <path
           d="M8 1.75a4.25 4.25 0 0 0-2.5 7.69V11h5V9.44A4.25 4.25 0 0 0 8 1.75ZM6 13h4M6.75 14.75h2.5"
           fill="none"
@@ -125,7 +125,7 @@ onBeforeUnmount(() => listen(false))
       :aria-expanded="open === 'corner'"
       @click="toggle('corner')"
     >
-      <svg viewBox="0 0 16 16" class="size-4 text-steel" aria-hidden="true">
+      <svg viewBox="0 0 16 16" class="size-4 text-mignon" aria-hidden="true">
         <path
           d="M8 1.75a4.25 4.25 0 0 0-2.5 7.69V11h5V9.44A4.25 4.25 0 0 0 8 1.75ZM6 13h4M6.75 14.75h2.5"
           fill="none"

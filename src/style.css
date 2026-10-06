@@ -1,16 +1,16 @@
 @import 'tailwindcss';
 
 /* --------------------------------------------------------------------------
-   Theme. Matched to the kitchen: the grinder's bold orange for the page and
-   accents (black text only — white on this orange is too faint), black + silver from the espresso machine, near-white
+   Theme. Matched to the kitchen: light orange page, the grinder's bold orange
+   for accents (only ever with black text — white on it is too faint), black + silver from the espresso machine, near-white
    cards. Change these values and the whole site follows.
    -------------------------------------------------------------------------- */
 @theme {
-  --color-peach: #ff7729; /* page background — Mignon orange */
+  --color-peach: #ffd8ad; /* page background — light orange (warm, not pink) */
   --color-paper: #fffcfa; /* cards — near white */
   --color-ink: #161616; /* text — machine black */
   --color-mignon: #ff7729; /* accent — Eureka Mignon orange, from eureka.co.it */
-  --color-steel: #333333; /* muted text — dark enough to read on the orange */
+  --color-steel: #55585d; /* muted text — dark silver, readable on both */
   --color-silver: #c3c6ca; /* hairlines and borders — machine silver */
 
   --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, ui-serif, serif;
@@ -37,8 +37,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-ink);
-  color: var(--color-paper);
+  background-color: var(--color-mignon);
+  color: var(--color-ink);
 }
 
 /* --------------------------------------------------------------------------

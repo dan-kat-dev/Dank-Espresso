@@ -16,7 +16,8 @@ const cardEl = useParallax(20)
 </script>
 
 <template>
-  <header>
+  <!-- Solid Mignon-orange band. Black text only on this orange. -->
+  <header class="bg-mignon">
     <div class="mx-auto max-w-5xl px-6 pt-24 pb-14 sm:pt-32 sm:pb-20">
       <div :ref="titleEl" class="parallax">
         <p class="text-xs font-medium tracking-[0.2em] text-ink uppercase">Welcome — help yourself</p>
