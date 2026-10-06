@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+/* --------------------------------------------------------------------------
+   Theme. One warm palette, no gradients. Change these six values and the
+   whole site follows.
+   -------------------------------------------------------------------------- */
+@theme {
+  --color-cream: #f7f1e8;
+  --color-paper: #fffdf9;
+  --color-espresso: #2b1d16;
+  --color-crema: #c98b44;
+  --color-clay: #b8613a;
+  --color-ash: #8a7a6d;
+
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, ui-serif, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  /* iOS: keep momentum scrolling buttery */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-crema);
+  color: var(--color-espresso);
+}
+
+/* --------------------------------------------------------------------------
+   Parallax + reveal primitives.
+   `--parallax` is written by useParallax() as a number in [-1, 1].
+   -------------------------------------------------------------------------- */
+.parallax {
+  transform: translate3d(0, calc(var(--parallax, 0) * var(--parallax-shift, 28px)), 0);
+  will-change: transform;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.7s var(--ease-soft),
+    transform 0.7s var(--ease-soft);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Anyone who asked their OS for calm gets a plain, still page. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .parallax {
+    transform: none;
+    will-change: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
