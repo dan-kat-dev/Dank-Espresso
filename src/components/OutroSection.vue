@@ -11,7 +11,7 @@ const revealEl = useReveal()
     <h2 class="font-display text-3xl text-balance sm:text-4xl">That's it. Enjoy.</h2>
 
     <p class="mx-auto mt-4 max-w-md text-lg leading-relaxed text-espresso/70 text-pretty">
-      Ran fast and sour? Grind finer. Slow and bitter? Grind coarser. One notch at a time.
+      Machine off? Grinder off? Basket scrubbed? Then you're done.
     </p>
 
     <a

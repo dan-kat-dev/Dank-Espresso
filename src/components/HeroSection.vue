@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import { gear } from '@/data/steps'
 import { useParallax } from '@/composables/useParallax'
+import { useMode, type Mode } from '@/composables/useMode'
 
 defineProps<{ total: number }>()
+
+const mode = useMode()
+const modes: { value: Mode; label: string }[] = [
+  { value: 'first', label: 'First time' },
+  { value: 'refresher', label: 'I’ve done this before' },
+]
 
 const titleEl = useParallax(-40)
 const cardEl = useParallax(20)
@@ -17,9 +24,40 @@ const cardEl = useParallax(20)
         How to make espresso
       </h1>
 
-      <p class="mt-6 max-w-xl text-lg leading-relaxed text-espresso/70 text-pretty">
-        {{ total }} steps, about twenty minutes including warm-up. Scroll at your own pace —
-        everything you need is already on the counter.
+      <div
+        role="radiogroup"
+        aria-label="How much detail"
+        class="mt-8 inline-flex rounded-full bg-espresso/5 p-1 ring-1 ring-espresso/10"
+      >
+        <button
+          v-for="option in modes"
+          :key="option.value"
+          type="button"
+          role="radio"
+          :aria-checked="mode === option.value"
+          class="rounded-full px-4 py-2 text-sm transition-colors"
+          :class="
+            mode === option.value
+              ? 'bg-paper text-espresso shadow-sm ring-1 ring-espresso/10'
+              : 'text-ash hover:text-espresso'
+          "
+          @click="mode = option.value"
+        >
+          {{ option.label }}
+        </button>
+      </div>
+
+      <p class="mt-5 max-w-xl text-lg leading-relaxed text-espresso/70 text-pretty">
+        <template v-if="mode === 'first'">
+          {{ total }} steps, about ten minutes. Every step is spelled out — scroll at your own
+          pace.
+        </template>
+        <template v-else>
+          Just the headlines. Tap “Show details” on any step you’re unsure of.
+        </template>
+        Warnings always show. Tap a
+        <span class="whitespace-nowrap font-medium text-espresso">Tip</span> bubble on a picture
+        for extras.
       </p>
     </div>
 

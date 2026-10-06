@@ -20,18 +20,40 @@ alternating left/right layout all follow automatically.
 
 ```ts
 {
-  id: 'tamp',                        // anchor, kebab-case
-  title: 'Tamp it flat',
-  meta: '18 g',                      // optional little label
-  body: 'One or two sentences.',
-  tip: 'Optional aside.',            // optional, gets the accent rule
-  image: '/images/tamp.png',         // optional — omit for a placeholder
-  imageAlt: 'Tamping the coffee bed.',
+  id: 'lock-in',                     // anchor, kebab-case
+  title: 'Lock the portafilter in',  // the headline; must work on its own
+  meta: '30 g',                      // optional little label
+  details: [                         // sub-steps, one short line each
+    'Handle pointing left, tabs parallel with the wall, lift it up into the machine.',
+    'Turn the handle right until it points straight at you.',
+  ],
+  warning: 'Snug, not tight.',       // optional — ALWAYS shown
+  tips: [                            // optional — behind a "Tip" bubble on the image
+    'Look under the machine to see the slots.',
+    { text: 'Pinned tip.', at: [62, 40] },  // own dot at x%, y% of the photo
+  ],
+  image: '/images/lock-in.png',      // optional — omit for a placeholder
+  imageAlt: 'The portafilter locked in.',
 }
 ```
 
-The `gear` export above it feeds the settings card at the top (grind, dose,
-yield, time) and the machine/grinder names.
+The `gear` export above it feeds the settings card at the top (dose, stop
+weight, time, sugar) and the machine/grinder names.
+
+### Modes, warnings and tips
+
+- **First time / I've done this before.** A toggle at the top. First time shows
+  every step's `details`; the refresher shows only titles, with a "Show details"
+  link per step. The choice is remembered per browser
+  ([`useMode.ts`](src/composables/useMode.ts)).
+- **`warning`** shows in both modes, every time. Keep it to things that damage
+  the machine, hurt someone, or ruin the shot, in one short line.
+- **`tips`** are nice-to-know extras like dialing in. Plain strings share one
+  "Tip" pill in the image's corner. Add `at: [x, y]` (percent of the image) to
+  pin a tip to a spot in the photo once the real pictures exist.
+
+The original narrated walkthroughs the steps were written from are in
+[`transcripts/`](transcripts/).
 
 ## Images
 
