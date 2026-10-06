@@ -1,16 +1,17 @@
 @import 'tailwindcss';
 
 /* --------------------------------------------------------------------------
-   Theme. One warm palette, no gradients. Change these six values and the
-   whole site follows.
+   Theme. Matched to the kitchen: light orange page, the grinder's bold
+   orange for accents, black + silver from the espresso machine, near-white
+   cards. Change these values and the whole site follows.
    -------------------------------------------------------------------------- */
 @theme {
-  --color-cream: #f7f1e8;
-  --color-paper: #fffdf9;
-  --color-espresso: #2b1d16;
-  --color-crema: #c98b44;
-  --color-clay: #b8613a;
-  --color-ash: #8a7a6d;
+  --color-peach: #fcede0; /* page background — light orange */
+  --color-paper: #fffcfa; /* cards — near white */
+  --color-ink: #161616; /* text — machine black */
+  --color-mignon: #ef5b1c; /* accent — Eureka Mignon orange (approximate) */
+  --color-steel: #63666b; /* muted text — dark silver, still readable */
+  --color-silver: #c3c6ca; /* hairlines and borders — machine silver */
 
   --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, ui-serif, serif;
   --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -28,16 +29,16 @@ html {
 }
 
 body {
-  background-color: var(--color-cream);
-  color: var(--color-espresso);
+  background-color: var(--color-peach);
+  color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: var(--color-crema);
-  color: var(--color-espresso);
+  background-color: var(--color-mignon);
+  color: var(--color-ink);
 }
 
 /* --------------------------------------------------------------------------

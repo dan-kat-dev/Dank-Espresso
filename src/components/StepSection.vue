@@ -40,9 +40,9 @@ const revealEl = useReveal()
     </div>
 
     <div :ref="textEl" class="parallax" :class="flipped ? 'md:order-1' : 'md:order-2'">
-      <p class="flex items-baseline gap-3 text-xs tracking-[0.2em] text-ash uppercase">
+      <p class="flex items-baseline gap-3 text-xs tracking-[0.2em] text-steel uppercase">
         <span>Step {{ index }} / {{ total }}</span>
-        <span v-if="step.meta" class="text-clay normal-case tracking-normal">{{ step.meta }}</span>
+        <span v-if="step.meta" class="rounded bg-mignon px-1.5 py-0.5 font-semibold text-ink normal-case tracking-normal">{{ step.meta }}</span>
       </p>
 
       <h2 class="mt-3 font-display text-3xl leading-tight text-balance sm:text-4xl">
@@ -53,12 +53,12 @@ const revealEl = useReveal()
       <p
         v-if="step.warning"
         role="note"
-        class="mt-5 flex items-start gap-3 rounded-xl bg-paper px-4 py-3 ring-1 ring-clay/45"
+        class="mt-5 flex items-start gap-3 rounded-xl bg-paper px-4 py-3 ring-1 ring-mignon"
       >
         <svg viewBox="0 0 24 24" class="mt-px size-5 shrink-0" aria-hidden="true">
-          <path d="M12 2.5 23 21.5H1Z" class="fill-clay" stroke-linejoin="round" />
-          <path d="M12 9v6" class="stroke-paper" stroke-width="2.2" stroke-linecap="round" />
-          <circle cx="12" cy="18.2" r="1.25" class="fill-paper" />
+          <path d="M12 2.5 23 21.5H1Z" class="fill-mignon" stroke-linejoin="round" />
+          <path d="M12 9v6" class="stroke-ink" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="12" cy="18.2" r="1.25" class="fill-ink" />
         </svg>
         <span class="leading-snug font-medium text-pretty">
           <span class="sr-only">Warning: </span>{{ step.warning }}
@@ -73,10 +73,10 @@ const revealEl = useReveal()
         :inert="!expanded"
       >
         <div class="overflow-hidden">
-          <ol class="mt-5 space-y-3 text-lg leading-relaxed text-espresso/75">
+          <ol class="mt-5 space-y-3 text-lg leading-relaxed text-ink/75">
             <li v-for="(line, i) in step.details" :key="i" class="flex gap-3 text-pretty">
               <span
-                class="mt-[0.45em] grid size-5 shrink-0 place-items-center rounded-full text-[0.7rem] leading-none font-semibold text-ash ring-1 ring-espresso/15"
+                class="mt-[0.45em] grid size-5 shrink-0 place-items-center rounded-full text-[0.7rem] leading-none font-semibold text-steel ring-1 ring-silver"
                 aria-hidden="true"
                 >{{ i + 1 }}</span
               >
@@ -89,7 +89,7 @@ const revealEl = useReveal()
       <button
         v-if="step.details.length"
         type="button"
-        class="mt-4 inline-flex items-center gap-1.5 text-xs tracking-[0.15em] text-ash uppercase transition-colors hover:text-espresso"
+        class="mt-4 inline-flex items-center gap-1.5 text-xs tracking-[0.15em] text-steel uppercase transition-colors hover:text-ink"
         :aria-expanded="expanded"
         :aria-controls="detailsId"
         @click="override = !expanded"

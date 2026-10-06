@@ -5,9 +5,9 @@ const progress = useScrollProgress()
 </script>
 
 <template>
-  <div class="fixed inset-x-0 top-0 z-50 h-0.5 bg-espresso/8" aria-hidden="true">
+  <div class="fixed inset-x-0 top-0 z-50 h-0.5 bg-ink/8" aria-hidden="true">
     <div
-      class="h-full origin-left bg-clay"
+      class="h-full origin-left bg-mignon"
       :style="{ transform: `scaleX(${progress})` }"
     />
   </div>

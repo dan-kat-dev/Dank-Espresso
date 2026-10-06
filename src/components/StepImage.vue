@@ -73,7 +73,7 @@ onBeforeUnmount(() => listen(false))
 <template>
   <figure
     ref="figureEl"
-    class="relative aspect-4/3 overflow-hidden rounded-2xl bg-paper ring-1 ring-espresso/10 sm:aspect-3/2"
+    class="relative aspect-4/3 overflow-hidden rounded-2xl bg-paper ring-1 ring-silver sm:aspect-3/2"
   >
     <img
       v-if="src"
@@ -87,10 +87,10 @@ onBeforeUnmount(() => listen(false))
     <!-- Placeholder: quiet, on-palette, obviously temporary. -->
     <div v-else class="absolute inset-0 grid place-items-center" aria-hidden="true">
       <div class="text-center">
-        <span class="block font-display text-8xl leading-none text-espresso/12 sm:text-9xl">
+        <span class="block font-display text-8xl leading-none text-ink/12 sm:text-9xl">
           {{ String(index).padStart(2, '0') }}
         </span>
-        <span class="mt-3 block text-xs tracking-[0.2em] text-ash uppercase">image here</span>
+        <span class="mt-3 block text-xs tracking-[0.2em] text-steel uppercase">image here</span>
       </div>
     </div>
 
@@ -105,7 +105,7 @@ onBeforeUnmount(() => listen(false))
       aria-label="Pro tip"
       @click="toggle(i)"
     >
-      <svg viewBox="0 0 16 16" class="size-4 text-crema" aria-hidden="true">
+      <svg viewBox="0 0 16 16" class="size-4 text-steel" aria-hidden="true">
         <path
           d="M8 1.75a4.25 4.25 0 0 0-2.5 7.69V11h5V9.44A4.25 4.25 0 0 0 8 1.75ZM6 13h4M6.75 14.75h2.5"
           fill="none"
@@ -121,11 +121,11 @@ onBeforeUnmount(() => listen(false))
     <button
       v-if="cornerTips.length"
       type="button"
-      class="tip-bubble absolute right-3 bottom-3 inline-flex h-8 items-center gap-1.5 rounded-full pr-3.5 pl-2.5 text-xs font-medium text-espresso"
+      class="tip-bubble absolute right-3 bottom-3 inline-flex h-8 items-center gap-1.5 rounded-full pr-3.5 pl-2.5 text-xs font-medium text-ink"
       :aria-expanded="open === 'corner'"
       @click="toggle('corner')"
     >
-      <svg viewBox="0 0 16 16" class="size-4 text-crema" aria-hidden="true">
+      <svg viewBox="0 0 16 16" class="size-4 text-steel" aria-hidden="true">
         <path
           d="M8 1.75a4.25 4.25 0 0 0-2.5 7.69V11h5V9.44A4.25 4.25 0 0 0 8 1.75ZM6 13h4M6.75 14.75h2.5"
           fill="none"
@@ -141,16 +141,16 @@ onBeforeUnmount(() => listen(false))
     <Transition name="tip">
       <div
         v-if="openTips.length"
-        class="absolute inset-x-3 bottom-3 max-h-[calc(100%-1.5rem)] overflow-y-auto rounded-xl bg-paper p-4 pr-10 shadow-lg ring-1 ring-espresso/10"
+        class="absolute inset-x-3 bottom-3 max-h-[calc(100%-1.5rem)] overflow-y-auto rounded-xl bg-paper p-4 pr-10 shadow-lg ring-1 ring-silver"
         role="note"
       >
-        <p class="text-[0.7rem] tracking-[0.18em] text-crema uppercase">Pro tip</p>
-        <ul class="mt-1.5 space-y-2 text-[0.95rem] leading-snug text-espresso/85">
+        <p class="text-[0.7rem] tracking-[0.18em] text-steel uppercase">Pro tip</p>
+        <ul class="mt-1.5 space-y-2 text-[0.95rem] leading-snug text-ink/85">
           <li v-for="(text, i) in openTips" :key="i" class="text-pretty">{{ text }}</li>
         </ul>
         <button
           type="button"
-          class="absolute top-2.5 right-2.5 grid size-7 place-items-center rounded-full text-ash transition-colors hover:text-espresso"
+          class="absolute top-2.5 right-2.5 grid size-7 place-items-center rounded-full text-steel transition-colors hover:text-ink"
           aria-label="Close tip"
           @click="open = null"
         >
@@ -167,8 +167,8 @@ onBeforeUnmount(() => listen(false))
 .tip-bubble {
   background-color: color-mix(in srgb, var(--color-paper) 90%, transparent);
   box-shadow:
-    0 1px 2px rgb(43 29 22 / 0.12),
-    0 0 0 1px rgb(43 29 22 / 0.1);
+    0 1px 2px rgb(22 22 22 / 0.12),
+    0 0 0 1px rgb(22 22 22 / 0.1);
   backdrop-filter: blur(4px);
   transition: scale 0.2s var(--ease-soft);
 }
