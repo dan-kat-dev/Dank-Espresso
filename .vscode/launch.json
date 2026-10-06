@@ -1,0 +1,26 @@
+{
+  // F5 in VS Code: installs deps if needed, starts Vite, then opens a browser
+  // with the VS Code debugger attached (breakpoints in .vue/.ts files work).
+  // Stopping the debugger also stops the dev server.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev server + Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "dev server",
+      "postDebugTask": "stop dev server"
+    },
+    {
+      "name": "Dev server + Edge",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "dev server",
+      "postDebugTask": "stop dev server"
+    }
+  ]
+}

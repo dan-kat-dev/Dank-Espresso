@@ -12,6 +12,12 @@ npm run dev
 Vite prints a **Network** URL — open that on your phone to test on the real
 device.
 
+**VS Code:** press **F5** (or pick *Dev server + Chrome* / *Dev server + Edge*
+in Run and Debug). It runs `npm install` only if dependencies are missing or
+changed, starts Vite on port 5173, and opens a browser with the VS Code
+debugger attached, so breakpoints in `.vue` and `.ts` files work. Stopping
+the debugger stops the server too.
+
 ## Editing the guide
 
 Everything lives in [`src/data/steps.ts`](src/data/steps.ts). Add, remove or

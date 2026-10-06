@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // npm install (only if needed), then the Vite dev server on port 5173.
+      // Runs in the background; the debugger waits until Vite says it's ready.
+      "label": "dev server",
+      "type": "shell",
+      "command": "npm run dev:debug",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": { "regexp": "^__never_matches__$" },
+        "background": {
+          "activesBegins": true,
+          "beginsPattern": "dev:debug",
+          "endsPattern": "Local:"
+        }
+      },
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "stop dev server",
+      "type": "shell",
+      "command": "echo ${input:terminateDevServer}",
+      "presentation": { "reveal": "never" }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "terminateDevServer",
+      "type": "command",
+      "command": "workbench.action.tasks.terminate",
+      "args": "dev server"
+    }
+  ]
+}

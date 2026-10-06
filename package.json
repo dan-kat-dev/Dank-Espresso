@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predev:debug": "node scripts/ensure-deps.mjs",
+    "dev:debug": "vite --strictPort",
     "build": "vue-tsc --build && vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --build"
