@@ -16,14 +16,12 @@ const cardEl = useParallax(20)
 </script>
 
 <template>
-  <!-- Solid orange band: big white title, black for everything smaller
-       (white on this orange is only legible at headline size). -->
-  <header class="bg-mignon">
+  <header>
     <div class="mx-auto max-w-5xl px-6 pt-24 pb-14 sm:pt-32 sm:pb-20">
       <div :ref="titleEl" class="parallax">
         <p class="text-xs font-medium tracking-[0.2em] text-ink uppercase">Welcome — help yourself</p>
 
-        <h1 class="mt-4 font-display text-white text-5xl leading-[1.05] text-balance sm:text-7xl">
+        <h1 class="mt-4 font-display text-5xl leading-[1.05] text-balance sm:text-7xl">
           How to make espresso
         </h1>
 

@@ -10,7 +10,7 @@ const revealEl = useReveal()
 
     <h2 class="font-display text-3xl text-balance sm:text-4xl">That's it. Enjoy.</h2>
 
-    <p class="mx-auto mt-4 max-w-md text-lg leading-relaxed text-ink/70 text-pretty">
+    <p class="mx-auto mt-4 max-w-md text-lg leading-relaxed text-ink/90 text-pretty">
       Machine off? Grinder off? Basket scrubbed? Then you're done.
     </p>
 
