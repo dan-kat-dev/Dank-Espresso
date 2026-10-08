@@ -128,7 +128,10 @@ export const steps: Step[] = [
         text: 'Lift the clear square lid off the top of the orange grinder. Set it upside down on the scale and tare.',
         note: 'Tare is the top-right button. It resets the scale to zero.',
       },
-      'Get the beans from the freezer and pour in 17.9 g.',
+      {
+        text: 'Get the beans from the freezer and pour in 17.9 g.',
+        note: 'If you’re using a different bean than the regular Kaladi Trieste roast, the right weight may be different.',
+      },
       'Close the bag and put it back in the freezer.',
     ],
     tips: [
