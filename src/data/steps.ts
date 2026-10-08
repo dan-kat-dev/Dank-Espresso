@@ -79,7 +79,6 @@ export const steps: Step[] = [
   {
     id: 'power-on',
     title: 'Turn on the machine',
-    meta: 'Left switch',
     details: [
       'Flip the left of the three front switches down.',
       'The left light means it’s on. The middle light, under the cup icon, means it’s hot — it warms up while you do the next steps.',
