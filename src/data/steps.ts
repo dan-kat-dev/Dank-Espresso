@@ -126,7 +126,7 @@ export const steps: Step[] = [
       { text: 'Turn on the scale.', note: 'It’s the bottom-right button.' },
       'Lift the clear square lid off the top of the orange grinder. Set it upside down on the scale and tare.',
       'Get the beans from the freezer and pour in 17.9 g.',
-      'Close the bag and put it straight back in the freezer.',
+      'Close the bag and put it back in the freezer.',
     ],
     tips: [
       'The beans live in the freezer on purpose — the roaster says it keeps them fresh longest.',
