@@ -124,7 +124,10 @@ export const steps: Step[] = [
     meta: '17.9 g',
     details: [
       { text: 'Turn on the scale.', note: 'It’s the bottom-right button.' },
-      'Lift the clear square lid off the top of the orange grinder. Set it upside down on the scale and tare.',
+      {
+        text: 'Lift the clear square lid off the top of the orange grinder. Set it upside down on the scale and tare.',
+        note: 'Tare is the top-right button. It resets the scale to zero.',
+      },
       'Get the beans from the freezer and pour in 17.9 g.',
       'Close the bag and put it back in the freezer.',
     ],
