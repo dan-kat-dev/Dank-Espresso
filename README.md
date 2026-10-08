@@ -39,6 +39,7 @@ alternating left/right layout all follow automatically.
     { text: 'Pinned tip.', at: [62, 40] },  // own dot at x%, y% of the photo
   ],
   image: '/images/lock-in.png',      // optional — omit for a placeholder
+  imageRatio: '3/4',                 // optional — portrait frame; default is 4/3
   imageAlt: 'The portafilter locked in.',
 }
 ```

@@ -14,6 +14,8 @@ const props = defineProps<{
   index: number
   src?: string
   alt?: string
+  /** CSS aspect-ratio for the frame, e.g. '3/4' for portrait art. Defaults to 4:3. */
+  ratio?: string
   tips?: Tip[]
 }>()
 
@@ -74,6 +76,7 @@ onBeforeUnmount(() => listen(false))
   <figure
     ref="figureEl"
     class="relative aspect-4/3 overflow-hidden rounded-2xl bg-paper ring-1 ring-silver"
+    :style="ratio ? { aspectRatio: ratio } : undefined"
   >
     <img
       v-if="src"

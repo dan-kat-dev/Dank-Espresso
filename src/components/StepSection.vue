@@ -36,7 +36,13 @@ const revealEl = useReveal()
     class="reveal mx-auto grid max-w-5xl items-center gap-8 px-6 py-16 sm:py-24 md:grid-cols-2 md:gap-14"
   >
     <div :ref="imageEl" class="parallax" :class="flipped ? 'md:order-2' : 'md:order-1'">
-      <StepImage :index="index" :src="step.image" :alt="step.imageAlt" :tips="step.tips" />
+      <StepImage
+        :index="index"
+        :src="step.image"
+        :alt="step.imageAlt"
+        :ratio="step.imageRatio"
+        :tips="step.tips"
+      />
     </div>
 
     <div :ref="textEl" class="parallax" :class="flipped ? 'md:order-1' : 'md:order-2'">

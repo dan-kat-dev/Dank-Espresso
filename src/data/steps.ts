@@ -17,7 +17,8 @@
  *
  * Images: drop files into `public/images/` and set `image: '/images/foo.png'`.
  * Leave `image` off and a numbered placeholder is drawn instead, so the site
- * looks finished before the art exists.
+ * looks finished before the art exists. Frames are 4:3; for portrait art add
+ * `imageRatio: '3/4'` so the frame follows the picture instead of cropping it.
  *
  * Source material: the narrated walkthroughs in /transcripts.
  * ─────────────────────────────────────────────────────────────────────────────
@@ -45,6 +46,8 @@ export interface Step {
   tips?: Tip[]
   /** Path under /public, e.g. '/images/grind.png'. Omit for a placeholder. */
   image?: string
+  /** Frame shape, as a CSS aspect-ratio. Defaults to '4/3'; use '3/4' for portrait art. */
+  imageRatio?: string
   /** Describe the picture for screen readers. */
   imageAlt?: string
 }
@@ -124,7 +127,9 @@ export const steps: Step[] = [
     tips: [
       'The grind knob is only for dialing in or switching beans. Move it a little at a time.',
     ],
-    imageAlt: 'Pouring beans from the corner of the lid into the grinder hopper.',
+    image: '/images/load-grinder.jpg',
+    imageAlt:
+      'Pouring beans from the corner of the lid into the orange grinder’s hopper. An arrow points to the power switch at the back, bottom right.',
   },
   {
     id: 'portafilter',
@@ -134,7 +139,10 @@ export const steps: Step[] = [
       'Drop in a clean basket. Right way up = the two locking tabs face up.',
       'Fit the funnel on top with its gap facing forward, away from the handle.',
     ],
-    imageAlt: 'Portafilter with basket and funnel, funnel gap facing away from the handle.',
+    image: '/images/portafilter.jpg',
+    imageRatio: '3/4',
+    imageAlt:
+      'Exploded view: the funnel above the basket above the open portafilter. Beside it, all three assembled, with the funnel’s gap facing away from the handle.',
   },
   {
     id: 'grind',
@@ -149,7 +157,10 @@ export const steps: Step[] = [
       'Beans hanging up in the hopper? Rock the grinder a little or tap the top until they all go through.',
       'When it stops, keep the portafilter still and rock the grinder forward and back once or twice — a few more grounds fall out.',
     ],
-    imageAlt: 'The portafilter in the grinder fork, pressing the black button.',
+    image: '/images/grind.jpg',
+    imageRatio: '3/4',
+    imageAlt:
+      'The portafilter in the grinder fork, pressing the black button, with grounds falling into the basket and the display reading 15.0.',
   },
   {
     id: 'pre-tamp',
@@ -159,7 +170,10 @@ export const steps: Step[] = [
       'Rest the tamper on the grounds and press gently — just enough to get them below the funnel’s lip, so nothing spills.',
       'Lift the funnel off.',
     ],
-    imageAlt: 'The tamper resting on the grounds inside the funnel.',
+    image: '/images/pre-tamp.jpg',
+    imageRatio: '3/4',
+    imageAlt:
+      'Two panels. Left: the tamper pressing down on the grounds inside the funnel. Right: the tamper and funnel lifted off, the grounds sitting below the basket rim.',
   },
   {
     id: 'level',

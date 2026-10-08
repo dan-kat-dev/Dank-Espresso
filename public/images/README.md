@@ -18,4 +18,7 @@ Frames are `4:3` at every size, and the image is `object-cover`d and scaled
 slightly so the parallax drift never exposes an edge. **Keep the subject away
 from the outer ~8% of the frame.**
 
-Suggested export: 4:3, 1200–1600px wide, JPG or WebP.
+Portrait art? Add `imageRatio: '3/4'` to the step and its frame turns portrait
+to match, instead of cropping the picture to 4:3.
+
+Suggested export: 4:3 (or 3:4), 1200–1600px on the long side, JPG or WebP.
