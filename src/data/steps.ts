@@ -70,7 +70,9 @@ export const steps: Step[] = [
       'Flip the left of the three front switches down.',
       'The left light means it’s on. The middle light, under the cup icon, means it’s hot — it warms up while you do the next steps.',
     ],
-    imageAlt: 'The three switches on the front of the espresso machine.',
+    image: '/images/power-on.jpg',
+    imageAlt:
+      'The three switches on the front of the espresso machine. An arrow points to the left one, with its light glowing underneath.',
   },
   {
     id: 'water',

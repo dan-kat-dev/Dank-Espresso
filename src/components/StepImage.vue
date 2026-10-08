@@ -73,7 +73,7 @@ onBeforeUnmount(() => listen(false))
 <template>
   <figure
     ref="figureEl"
-    class="relative aspect-4/3 overflow-hidden rounded-2xl bg-paper ring-1 ring-silver sm:aspect-3/2"
+    class="relative aspect-4/3 overflow-hidden rounded-2xl bg-paper ring-1 ring-silver"
   >
     <img
       v-if="src"

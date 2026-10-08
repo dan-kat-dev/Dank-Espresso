@@ -11,8 +11,11 @@ Drop image files in this folder, then reference them from `src/data/steps.ts`:
 }
 ```
 
-Frames are `4:3` on phones and `3:2` from `sm:` up, and the image is
-`object-cover`d and scaled slightly so the parallax drift never exposes an
-edge. **Keep the subject away from the outer ~8% of the frame.**
+Name each file after its step's `id` (`power-on.jpg`, `tamp.jpg`, …) rather
+than its number, so reordering steps never leaves a misnamed image.
 
-Suggested export: 1600px wide, WebP or PNG.
+Frames are `4:3` at every size, and the image is `object-cover`d and scaled
+slightly so the parallax drift never exposes an edge. **Keep the subject away
+from the outer ~8% of the frame.**
+
+Suggested export: 4:3, 1200–1600px wide, JPG or WebP.
