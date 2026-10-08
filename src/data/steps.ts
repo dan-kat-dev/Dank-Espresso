@@ -202,7 +202,7 @@ export const steps: Step[] = [
     image: '/images/pre-tamp.jpg',
     imageRatio: '3/4',
     imageAlt:
-      'Two panels. Left: the tamper pressing down on the grounds inside the funnel. Right: the tamper and funnel lifted off, the grounds sitting below the basket rim.',
+      'Two panels. Left: the tamper resting on the grounds inside the funnel, with a feather above it and the words “place gently, no force”. Right: the tamper and funnel lifted off, the grounds sitting below the basket rim.',
   },
   {
     id: 'level',
@@ -213,7 +213,10 @@ export const steps: Step[] = [
       'Lift it off.',
     ],
     tips: ['The leveler’s depth is already set. Only change it when dialing in a new bean.'],
-    imageAlt: 'The leveler sitting on the basket rim.',
+    image: '/images/level.jpg',
+    imageRatio: '3/4',
+    imageAlt:
+      'The leveler set down on the basket, with arrows showing it spun around on the rim and then lifted straight off.',
   },
   {
     id: 'tamp',
