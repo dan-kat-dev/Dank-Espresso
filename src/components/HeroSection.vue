@@ -46,8 +46,12 @@ onBeforeUnmount(() => io?.disconnect())
           ref="headingEl"
           class="mt-4 font-display text-5xl leading-[1.05] text-balance sm:text-7xl"
         >
-          How to make espresso
+          Dan Kat Espresso
         </h1>
+
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink text-pretty">
+          Step-by-step instructions for making delicious espresso using Dan’s setup.
+        </p>
       </div>
     </div>
 

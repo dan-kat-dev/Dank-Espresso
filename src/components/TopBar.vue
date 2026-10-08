@@ -52,7 +52,7 @@ watch(
   >
     <div class="mx-auto flex h-12 max-w-5xl items-center gap-3 px-4 sm:px-6">
       <a href="#top" class="min-w-0 truncate font-display text-base sm:text-lg">
-        How to make espresso
+        Dan Kat Espresso
       </a>
 
       <dl class="ml-4 hidden gap-5 text-xs lg:flex">
