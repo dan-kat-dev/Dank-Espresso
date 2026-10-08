@@ -3,6 +3,7 @@ import { steps } from '@/data/steps'
 import HeroSection from '@/components/HeroSection.vue'
 import StepSection from '@/components/StepSection.vue'
 import OutroSection from '@/components/OutroSection.vue'
+import TroubleSection from '@/components/TroubleSection.vue'
 </script>
 
 <template>
@@ -18,5 +19,7 @@ import OutroSection from '@/components/OutroSection.vue'
     />
 
     <OutroSection />
+
+    <TroubleSection />
   </main>
 </template>

@@ -3,7 +3,9 @@ import { computed, ref, watch } from 'vue'
 import type { Step } from '@/data/steps'
 import { useParallax, useReveal } from '@/composables/useParallax'
 import { useMode } from '@/composables/useMode'
+import DetailList from './DetailList.vue'
 import StepImage from './StepImage.vue'
+import WarningNote from './WarningNote.vue'
 
 const props = defineProps<{
   step: Step
@@ -55,21 +57,8 @@ const revealEl = useReveal()
         {{ step.title }}
       </h2>
 
-      <!-- Warnings show in every mode. Short, loud, nothing else. -->
-      <p
-        v-if="step.warning"
-        role="note"
-        class="mt-5 flex items-start gap-3 rounded-xl bg-paper px-4 py-3 ring-2 ring-mignon"
-      >
-        <svg viewBox="0 0 24 24" class="mt-px size-5 shrink-0" aria-hidden="true">
-          <path d="M12 2.5 23 21.5H1Z" class="fill-mignon" stroke-linejoin="round" />
-          <path d="M12 9v6" class="stroke-ink" stroke-width="2.2" stroke-linecap="round" />
-          <circle cx="12" cy="18.2" r="1.25" class="fill-ink" />
-        </svg>
-        <span class="leading-snug font-medium text-pretty">
-          <span class="sr-only">Warning: </span>{{ step.warning }}
-        </span>
-      </p>
+      <!-- Warnings show in every mode. -->
+      <WarningNote v-if="step.warning" class="mt-5">{{ step.warning }}</WarningNote>
 
       <div
         v-if="step.details.length"
@@ -79,16 +68,7 @@ const revealEl = useReveal()
         :inert="!expanded"
       >
         <div class="overflow-hidden">
-          <ol class="mt-5 space-y-3 text-lg leading-relaxed text-ink/90">
-            <li v-for="(line, i) in step.details" :key="i" class="flex gap-3 text-pretty">
-              <span
-                class="mt-[0.45em] grid size-5 shrink-0 place-items-center rounded-full bg-mignon text-[0.7rem] leading-none font-semibold text-ink"
-                aria-hidden="true"
-                >{{ i + 1 }}</span
-              >
-              <span>{{ line }}</span>
-            </li>
-          </ol>
+          <DetailList class="mt-5" :lines="step.details" />
         </div>
       </div>
 

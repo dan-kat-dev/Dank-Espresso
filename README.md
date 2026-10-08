@@ -47,6 +47,10 @@ alternating left/right layout all follow automatically.
 The `gear` export above it feeds the settings card at the top (dose, stop
 weight, time, sugar) and the machine/grinder names.
 
+The `troubleshooting` export at the bottom feeds the "If something goes wrong"
+section after the steps: things a guest shouldn't normally have to do, like
+checking the water tank.
+
 ### Modes, warnings and tips
 
 - **First time / I've done this before.** A toggle in the hero, and again in the

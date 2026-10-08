@@ -20,6 +20,9 @@
  * looks finished before the art exists. Frames are 4:3; for portrait art add
  * `imageRatio: '3/4'` so the frame follows the picture instead of cropping it.
  *
+ * Not part of the routine? Things a guest should only check when it isn't
+ * working go in `troubleshooting` at the bottom of this file instead.
+ *
  * Source material: the narrated walkthroughs in /transcripts.
  * ─────────────────────────────────────────────────────────────────────────────
  */
@@ -50,6 +53,24 @@ export interface Step {
   imageRatio?: string
   /** Describe the picture for screen readers. */
   imageAlt?: string
+}
+
+/**
+ * A "what went wrong" entry. These sit in their own section after the steps:
+ * things a guest shouldn't normally have to do, but can check if it isn't
+ * working. Always shown in full, in both modes.
+ */
+export interface Fix {
+  /** Used for the URL hash / anchor link. Keep it kebab-case. */
+  id: string
+  /** What the guest is seeing, as a short question. */
+  problem: string
+  /** What to do about it. Short imperative headline. */
+  title: string
+  /** The sub-steps, in order. Plain text, one short sentence each. */
+  details: string[]
+  /** Equipment damage, safety, or "this ruins it" only. */
+  warning?: string
 }
 
 export const gear = {
@@ -86,16 +107,6 @@ export const steps: Step[] = [
     image: '/images/power-on.jpg',
     imageAlt:
       'The three switches on the front of the espresso machine. An arrow points to the left one, with its light glowing underneath.',
-  },
-  {
-    id: 'water',
-    title: 'Check the water tank',
-    details: [
-      'Look at the clear tank on the machine.',
-      'The water should be above the end of the hose inside it. Top it up if not.',
-    ],
-    warning: 'Water must cover the hose. Running dry can damage the pump.',
-    imageAlt: 'The clear water tank, with the water line above the hose.',
   },
   {
     id: 'weigh',
@@ -226,6 +237,7 @@ export const steps: Step[] = [
       'A couple more grams drip out after — that’s normal. The whole thing takes about 30 seconds.',
     ],
     tips: [
+      'Nothing coming out? The water tank may be low — see “If something goes wrong” at the bottom of the page.',
       'Dialing in: well over 30 s to reach 35.8 g? Grind coarser or use a bit less coffee. Done way before 30 s? Grind finer or use a bit more. Change one thing, a little at a time.',
     ],
     imageAlt: 'Espresso pouring into the cup with the scale reading close to 35.8 g.',
@@ -274,5 +286,18 @@ export const steps: Step[] = [
     ],
     warning: 'Always turn the machine off. Left on, it stays hot all day.',
     imageAlt: 'Flipping the machine’s left switch up.',
+  },
+]
+
+export const troubleshooting: Fix[] = [
+  {
+    id: 'water',
+    problem: 'No water coming out?',
+    title: 'Check the water tank',
+    details: [
+      'Look at the clear tank on the machine.',
+      'The water should be above the end of the hose inside it. Top it up if not.',
+    ],
+    warning: 'Water must cover the hose. Running dry can damage the pump.',
   },
 ]
