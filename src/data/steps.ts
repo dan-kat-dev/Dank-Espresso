@@ -103,7 +103,8 @@ export const steps: Step[] = [
     meta: 'Left switch',
     details: [
       'Flip the left of the three front switches down.',
-      'The left light means it’s on. The middle light, under the cup icon, means it’s hot — it warms up while you do the next steps.',
+      'The light under the left switch should turn on immediately. This means the power is on.',
+      'Wait for the light under the middle switch to come on too, about 1–2 minutes. That means the machine is hot enough to brew.',
     ],
     image: '/images/power-on.jpg',
     imageAlt:
