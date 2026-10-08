@@ -50,8 +50,19 @@ export interface Step {
 }
 
 export const gear = {
-  machine: 'Your Espresso Machine',
-  grinder: 'The orange grinder',
+  /** Listed under the settings card, each linked to the maker's own page. */
+  equipment: [
+    {
+      label: 'Espresso machine',
+      name: 'Gaggia Classic Pro',
+      url: 'https://www.gaggia-na.com/products/gaggia-classic-pro',
+    },
+    {
+      label: 'Grinder',
+      name: 'Eureka Mignon Specialità',
+      url: 'https://www.eureka.co.it/en/products/eureka+1920/prosumer+grinders/silent+range/20/',
+    },
+  ],
   /** Shown in the little settings card at the top. Edit freely. */
   settings: [
     { label: 'Beans', value: '18 g' },

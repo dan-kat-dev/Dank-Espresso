@@ -93,7 +93,22 @@ onBeforeUnmount(() => io?.disconnect())
           </div>
         </dl>
 
-        <p class="mt-3 text-sm text-ink">{{ gear.machine }} · {{ gear.grinder }}</p>
+        <dl class="mt-3 space-y-1 text-sm text-ink">
+          <div v-for="item in gear.equipment" :key="item.label">
+            <dt class="inline">{{ item.label }}:</dt>
+            {{ ' ' }}
+            <dd class="inline">
+              <a
+                :href="item.url"
+                target="_blank"
+                rel="noopener"
+                class="font-semibold underline underline-offset-2"
+              >
+                {{ item.name }}
+              </a>
+            </dd>
+          </div>
+        </dl>
       </div>
     </div>
   </header>
