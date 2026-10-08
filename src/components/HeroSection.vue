@@ -7,8 +7,6 @@ import cover from '@/assets/cover.jpg'
 import ModeToggle from './ModeToggle.vue'
 import TopBar from './TopBar.vue'
 
-defineProps<{ total: number }>()
-
 const mode = useMode()
 
 const titleEl = useParallax(-40)
@@ -77,15 +75,12 @@ onBeforeUnmount(() => io?.disconnect())
 
         <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink text-pretty">
           <template v-if="mode === 'first'">
-            {{ total }} steps, about ten minutes. Every step is spelled out — scroll at your own
-            pace.
+            Detailed instructions almost anyone can follow to make their first espresso.
           </template>
           <template v-else>
-            Just the headlines. Tap “Show details” on any step you’re unsure of.
+            Detailed instructions minimized. Check out the pro-tips along the way, you might learn
+            something new!
           </template>
-          Warnings always show. Tap a
-          <span class="whitespace-nowrap font-semibold">Tip</span> bubble on a picture
-          for extras.
         </p>
       </div>
 

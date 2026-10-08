@@ -7,7 +7,7 @@ import OutroSection from '@/components/OutroSection.vue'
 
 <template>
   <main id="top">
-    <HeroSection :total="steps.length" />
+    <HeroSection />
 
     <StepSection
       v-for="(step, i) in steps"
