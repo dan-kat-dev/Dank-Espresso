@@ -40,17 +40,15 @@ onBeforeUnmount(() => io?.disconnect())
   <header class="relative isolate overflow-hidden bg-mignon">
     <div class="mx-auto max-w-5xl px-6 pt-14 sm:pt-20 lg:pt-32">
       <div :ref="titleEl" class="parallax lg:w-1/2 lg:pr-12">
-        <p class="text-xs font-medium tracking-[0.2em] text-ink uppercase">Welcome — help yourself</p>
-
         <h1
           ref="headingEl"
-          class="mt-4 font-display text-5xl leading-[1.05] text-balance sm:text-7xl"
+          class="font-display text-5xl leading-[1.05] text-balance sm:text-7xl"
         >
           Dan Kat Espresso
         </h1>
 
         <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink text-pretty">
-          Step-by-step instructions for making delicious espresso using Dan’s setup.
+          Step-by-step instructions for making your own delicious espresso using Dan’s setup.
         </p>
       </div>
     </div>
