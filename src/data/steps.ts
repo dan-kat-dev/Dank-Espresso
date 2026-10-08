@@ -132,7 +132,10 @@ export const steps: Step[] = [
         text: 'Get the beans from the freezer and pour in 17.9 g.',
         note: 'If you’re using a different bean than the regular Kaladi Trieste roast, the right weight may be different.',
       },
-      'Close the bag and put it back in the freezer.',
+      {
+        text: 'Close the bag and put it back in the freezer.',
+        note: 'If you leave it out, the cats may try to eat the bag.',
+      },
     ],
     tips: [
       'The beans live in the freezer on purpose — the roaster says it keeps them fresh longest.',
