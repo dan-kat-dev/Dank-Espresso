@@ -153,7 +153,8 @@ export const steps: Step[] = [
       'Pour the weighed beans into the grinder.',
       'Place the lid back on top of the hopper.',
     ],
-    warning: 'Leave the grind knob (front, top right) alone — it’s already set.',
+    warning:
+      'Leave the black knob on the top right alone — it should already be set. Using a different bean? Turning it even a fraction of a millimeter makes a big difference.',
     tips: [
       'The grind knob is only for dialing in or switching beans. Move it a little at a time.',
     ],
