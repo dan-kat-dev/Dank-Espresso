@@ -34,6 +34,12 @@
  */
 export type Tip = string | { text: string; at?: [number, number] }
 
+/**
+ * One sub-step. Usually a plain string. Give it a `note` to hang an unnumbered
+ * sub-bullet under it — for what you should see happen, not another thing to do.
+ */
+export type Detail = string | { text: string; note: string }
+
 export interface Step {
   /** Used for the URL hash / anchor link. Keep it kebab-case. */
   id: string
@@ -41,8 +47,8 @@ export interface Step {
   title: string
   /** Optional short label shown next to the step number, e.g. a time or weight. */
   meta?: string
-  /** The sub-steps, in order. Plain text, one short sentence each. */
-  details: string[]
+  /** The sub-steps, in order. One short sentence each. */
+  details: Detail[]
   /** Always shown. Equipment damage, safety, or "this ruins it" only. */
   warning?: string
   /** Optional pro tips, tucked behind a bubble on the image. */
@@ -67,8 +73,8 @@ export interface Fix {
   problem: string
   /** What to do about it. Short imperative headline. */
   title: string
-  /** The sub-steps, in order. Plain text, one short sentence each. */
-  details: string[]
+  /** The sub-steps, in order. One short sentence each. */
+  details: Detail[]
   /** Equipment damage, safety, or "this ruins it" only. */
   warning?: string
 }
@@ -102,8 +108,10 @@ export const steps: Step[] = [
     title: 'Turn on the machine',
     meta: 'Left switch',
     details: [
-      'Flip the left of the three front switches down.',
-      'The light under the left switch should turn on immediately. This means the power is on.',
+      {
+        text: 'Flip the left of the three front switches down.',
+        note: 'The light under the left switch should turn on immediately. This means the power is on.',
+      },
       'Wait for the light under the middle switch to come on too, about 1–2 minutes. That means the machine is hot enough to brew.',
     ],
     image: '/images/power-on.jpg',

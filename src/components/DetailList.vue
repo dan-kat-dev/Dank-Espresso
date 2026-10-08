@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps<{ lines: string[] }>()
+import type { Detail } from '@/data/steps'
+
+defineProps<{ lines: Detail[] }>()
 </script>
 
 <template>
@@ -10,7 +12,17 @@ defineProps<{ lines: string[] }>()
         aria-hidden="true"
         >{{ i + 1 }}</span
       >
-      <span>{{ line }}</span>
+      <span v-if="typeof line === 'string'">{{ line }}</span>
+      <div v-else>
+        {{ line.text }}
+        <!-- Unnumbered, a touch smaller and indented: it belongs to the line above. -->
+        <ul class="mt-1.5 pl-2 text-base leading-relaxed">
+          <li class="flex gap-2.5">
+            <span class="mt-[0.65em] size-1.5 shrink-0 rounded-full bg-mignon" aria-hidden="true" />
+            <span>{{ line.note }}</span>
+          </li>
+        </ul>
+      </div>
     </li>
   </ol>
 </template>
