@@ -98,7 +98,9 @@ export const steps: Step[] = [
       'The beans live in the freezer on purpose — the roaster says it keeps them fresh longest.',
       'Using different beans? 18 g is right for our usual ones; others may need dialing in. See the tip on “Pull the shot”.',
     ],
-    imageAlt: 'The grinder’s clear lid upside down on the scale, holding beans.',
+    image: '/images/weigh.jpg',
+    imageAlt:
+      'Beans pouring from the bag into the grinder’s clear lid, upside down on the scale, which reads 17.9 g.',
   },
   {
     id: 'load-grinder',
