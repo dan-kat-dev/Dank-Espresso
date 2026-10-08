@@ -48,7 +48,8 @@ weight, time, sugar) and the machine/grinder names.
 
 ### Modes, warnings and tips
 
-- **First time / I've done this before.** A toggle at the top. First time shows
+- **First time / I've done this before.** A toggle in the hero, and again in the
+  bar that sticks to the top once you scroll past the title. First time shows
   every step's `details`; the refresher shows only titles, with a "Show details"
   link per step. The choice is remembered per browser
   ([`useMode.ts`](src/composables/useMode.ts)).
@@ -78,7 +79,8 @@ animation system, ~150 lines:
   `requestAnimationFrame` loop and one `IntersectionObserver` serve every step
   on the page, and only on-screen elements are measured.
 - `useReveal()` — fades + lifts an element the first time it's seen.
-- `useScrollProgress()` — drives the thin bar at the top.
+- `useScrollProgress()` — drives the thin line along the bottom of the sticky
+  top bar.
 
 All of it is transform-only (no layout thrash) and fully disabled under
 `prefers-reduced-motion: reduce`.

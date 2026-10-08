@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import { steps } from '@/data/steps'
-import ProgressBar from '@/components/ProgressBar.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import StepSection from '@/components/StepSection.vue'
 import OutroSection from '@/components/OutroSection.vue'
 </script>
 
 <template>
-  <ProgressBar />
-
   <main id="top">
     <HeroSection :total="steps.length" />
 
