@@ -78,8 +78,7 @@ onBeforeUnmount(() => io?.disconnect())
             Detailed instructions almost anyone can follow to make their first espresso.
           </template>
           <template v-else>
-            Detailed instructions minimized. Check out the pro-tips along the way, you might learn
-            something new!
+            Check out the pro-tips along the way, you might learn something new!
           </template>
         </p>
       </div>
