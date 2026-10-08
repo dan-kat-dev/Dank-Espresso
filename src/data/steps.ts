@@ -66,7 +66,7 @@ export const gear = {
   /** Shown in the little settings card at the top. Edit freely. */
   settings: [
     { label: 'Beans', value: '17.9 g' },
-    { label: 'Stop at', value: '30 g' },
+    { label: 'Output', value: '35.8 g' },
     { label: 'Shot time', value: '~30 s' },
     { label: 'Sugar', value: '2.4 g' },
   ],
@@ -206,16 +206,16 @@ export const steps: Step[] = [
   {
     id: 'pull',
     title: 'Pull the shot',
-    meta: '30 g · ~30 s',
+    meta: '35.8 g · ~30 s',
     details: [
       'At the same time: start the scale’s timer and push the middle switch down.',
-      'Watch the weight. At 30 g, flip the middle switch back up.',
+      'Watch the weight. At 35.8 g, flip the middle switch back up.',
       'A couple more grams drip out after — that’s normal. The whole thing takes about 30 seconds.',
     ],
     tips: [
-      'Dialing in: well over 30 s to reach 30 g? Grind coarser or use a bit less coffee. Done way before 30 s? Grind finer or use a bit more. Change one thing, a little at a time.',
+      'Dialing in: well over 30 s to reach 35.8 g? Grind coarser or use a bit less coffee. Done way before 30 s? Grind finer or use a bit more. Change one thing, a little at a time.',
     ],
-    imageAlt: 'Espresso pouring into the cup with the scale reading close to 30 g.',
+    imageAlt: 'Espresso pouring into the cup with the scale reading close to 35.8 g.',
   },
   {
     id: 'rinse',
@@ -239,7 +239,7 @@ export const steps: Step[] = [
       'Stir for 20–30 seconds, scraping the bottom — it’s slow to dissolve.',
       'Drink it within a minute or so.',
     ],
-    tips: ['2.4 g is the house sweet spot for a 30 g shot: less tastes harsh, more is too sweet.'],
+    tips: ['2.4 g is the house sweet spot for a 35.8 g shot: less tastes harsh, more is too sweet.'],
     imageAlt: 'Spooning sugar into the espresso on the scale.',
   },
   {
