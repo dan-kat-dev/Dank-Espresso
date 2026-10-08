@@ -65,7 +65,7 @@ export const gear = {
   ],
   /** Shown in the little settings card at the top. Edit freely. */
   settings: [
-    { label: 'Beans', value: '18 g' },
+    { label: 'Beans', value: '17.9 g' },
     { label: 'Stop at', value: '30 g' },
     { label: 'Shot time', value: '~30 s' },
     { label: 'Sugar', value: '2.4 g' },
@@ -98,16 +98,16 @@ export const steps: Step[] = [
   {
     id: 'weigh',
     title: 'Weigh out the beans',
-    meta: '18.0 g',
+    meta: '17.9 g',
     details: [
       'Turn on the scale.',
       'Lift the clear square lid off the top of the orange grinder. Set it upside down on the scale and tare.',
-      'Get the beans from the freezer and pour in 18.0 g.',
+      'Get the beans from the freezer and pour in 17.9 g.',
       'Close the bag and put it straight back in the freezer.',
     ],
     tips: [
       'The beans live in the freezer on purpose — the roaster says it keeps them fresh longest.',
-      'Using different beans? 18 g is right for our usual ones; others may need dialing in. See the tip on “Pull the shot”.',
+      'Using different beans? 17.9 g is right for our usual ones; others may need dialing in. See the tip on “Pull the shot”.',
     ],
     image: '/images/weigh.jpg',
     imageAlt:
