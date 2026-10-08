@@ -150,7 +150,8 @@ export const steps: Step[] = [
     title: 'Switch on the grinder and add the beans',
     details: [
       'The grinder’s power switch is at the bottom back corner of the right side. Flip it on.',
-      'Hold the lid corner-down, like a diamond, and pour the beans into the clear hopper on top.',
+      'Pour the weighed beans into the grinder.',
+      'Place the lid back on top of the hopper.',
     ],
     warning: 'Leave the grind knob (front, top right) alone — it’s already set.',
     tips: [
