@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection.vue'
 import StepSection from '@/components/StepSection.vue'
 import OutroSection from '@/components/OutroSection.vue'
 import TroubleSection from '@/components/TroubleSection.vue'
+import StepNav from '@/components/StepNav.vue'
 </script>
 
 <template>
@@ -22,4 +23,6 @@ import TroubleSection from '@/components/TroubleSection.vue'
 
     <TroubleSection />
   </main>
+
+  <StepNav />
 </template>
